@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>The Limit Order Book</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <!-- <link rel="stylesheet" href="css/theme/black.css"> -->
+    <link rel="stylesheet" href="css/theme/league.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section>
+	  <section data-background-image="./city_skyline.jpg">
+	    <h2>The Limit Order Book</h2>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	    <br>
+	  </section>
+	  <section>
+	    <h2>The Limit Order Book</h2>
+	    <br>
+	    <p> MATT BRIGIDA </p>
+	    <p> Associate Professor of Finance (SUNY Polytechnic Institute) & Financial Education Advisor, Milken Institute </p>
+	  </section>
+	</section>
+
+
+	<section>
+	  <h3>The Limit Order Book</h3>
+
+	  <p align="left">The *limit order book* is the list of orders (prices at which you can transact) for a given security.</p>
+	  <ul>
+	    <li>Depending on the security, these orders may be on one exchange, or aggregated across many exchanges.</li>
+	    <li>This presentation will give a basic description of the order book, and how your transactions will be handled by (and how they will affect) the book.</li>
+	    <li>You will transact in an order book if you trade stock, futures, options, and/or other securities.  However, in this presentation we'll use stock examples.</li>
+	  </ul>
+	</section>
+
+<section>
+<section>
+<h3>Order Book Description</h3>
+<p align="left">In the slide below, the plot on the right shows the full order book -- sell orders from \$11.38 to about \$12.50, and buy orders from \$11.36 down to about \$10.20.</p>
+<ul>
+  <li> We generally only show the book 5 or 10 levels deep, as in the graphic on the left, which shows the book 5 levels deep.</li>
+</ul>
+</section>
+
+<section data-background-image="./code_image.jpg">
+  <div class="stretch">
+    <iframe src="https://micfm.shinyapps.io/limit_order_book_app1/" height="100%" width="100%"></iframe>
+  </div>
+  <!-- <a href="https://micfm.shinyapps.io/markowitz_app1/" data-preview-link>Interact with Diversification</a> -->
+  <!-- <iframe width="100%" height="100%" src="https://www.w3schools.com"></iframe> -->
+</section>
+</section>
+
+<section>
+<h3>Example:</h3> 
+
+<p align="left">Reading the first 2 levels of the book:</p>
+
+<ul>
+<li> There are 400 shares being offered for sale at 11.38, and 1600 shares offered at 11.39.  This means, if we wish, we can buy shares at these prices.  </li>
+<li> Similarly there are 2700 shares being being bid for at 11.36, and 1100 shares being bid for at 11.35.  This means, if we wish, we can sell shares at these prices.  </li>  
+</ul>
+</section>
+
+<section>
+<h3>Inside Quotes</h3>
+
+<p align="left">The <b class="fragment highlight-green">inside quotes</b>, which are also known as the <b class="fragment highlight-green">Best Bid and Offer</b> or <b class="fragment highlight-green">BBO</b>, are the highest bid, and lowest ask, in the order book.</p>
+
+<ul>
+  <li>They are the prices at which the next market buy (with the best offer) or market sell (with the best bid) will transact.</li>
+  <li>In the above book the <b class="fragment highlight-green">inside quotes</b> are 11.36/11.38.</li>
+</ul>
+</section>
+
+<section>
+<h3>The Bid-Ask Spread</h3>
+
+<p align="left">In this case the bid/ask spread is $11.36 - $11.38 = $0.02, or $$\frac{\$0.02}{\$11.38} = 0.1757\%$$.</p>
+
+<ul>
+  <li>The bid/ask percentage spread measures the <b class="fragment highlight-red">cost to transact</b> in that security---the larger the spread, the larger the transaction costs.</li>
+</ul> 
+</section>
+
+
+<section>
+<h3>The Order Book and Liquidity</h3>
+
+<p align="left">The smaller the bid/ask spread, and the more limit orders in the book, the greater the security's <b class="fragment highlight-green">liquidity</b>.  </p>
+
+<ul>
+  <li><b class="fragment highlight-green">Liquidity</b> is a measure of your ability to cheaply transact (buy or sell) a security without moving the inside quotes by much.</li>
+  <li>Sufficient liquidity is an integral component of a well-functioning market.</li>
+</ul> 
+</section>
+
+
+<section>
+<h3>The Market Maker</h3>
+
+<p align='left'>A <b class="fragment highlight-current-blue">market maker's</b> job is to maintain, at all times, bids and offers in the order book.  This provides liquidity to the market.</p>
+
+<ul>
+  <li>The <a href="https://www.sec.gov/answers/mktmaker.htm">market maker</a> attempts to earn the bid/ask spread---repeatedly buying at the bid and selling at the ask.</li>
+  <li>The order book is comprised of the market maker's limit orders, as well as limit orders entered by other investors and traders.  However, the market maker <b class="fragment highlight-red">must</b> maintain orders in the book, and other market participants do not have this requirement.</li>
+</ul>
+</section>
+
+
+<section>
+<h3>Entering a Market Order</h3>
+
+If you want to buy or sell a stock, one type of order you can enter is a *market order*.  This will buy or sell the stock at the best available price in the market at the time the order arrives.  With a market order, you are guaranteed that you will buy or sell; however, you are not sure of the price at which you will trade.
+
+-  A market buy will buy at the lowest ask price.  If it buys all available shares at the lowest ask, the next ask above will become the new lowest ask, and that is where additional shares will be bought.
+
+-  A market sell will sell at the highest bid price.  Similarly, if it sells all available shares at the highest bid, the next bid below will become the new highest bid, and that is where additional shares will be sold.
+
+Use the app in the next slide to enter market orders and see the effect on the limit order book.  On the left is the original book, and the right shows the book after the order is executed. 
+</textarea>
+</section>
+
+<section data-background-image="./code_image.jpg">
+  <div class="stretch">
+    <iframe src="https://micfm.shinyapps.io/markowitz_app1/" height="100%" width="100%"></iframe>
+  </div>
+  <!-- <a href="https://micfm.shinyapps.io/markowitz_app1/" data-preview-link>Interact with Diversification</a> -->
+  <!-- <iframe width="100%" height="100%" src="https://www.w3schools.com"></iframe> -->
+</section>
+
+
+<section data-markdown>
+	<textarea data-template>
+<h3>Entering a Limit Order</h3>
+
+You can also buy or sell stock with a *limit order*.  In this type of order, you specify the highest/lowest price at which you will buy/sell.  With a limit order, you are guaranteed the price at which you will buy or sell (if the trade is executed); however, you are not guaranteed that you will actually trade.
+
+-  Say you enter a limit order to buy shares at \$50.03. Your order will sit in the limit order book until a sell order executes against your trade at \$50.03.  
+
+- Similarly, a limit sell will sit in the book until a buy order executes against your sell.   
+
+What if I enter a limit order to buy at \$50.03 and the present ask is \$50.01?  Your broker will likely warn you, but if you enter the order it will immediately trigger, turn into a market order, and execute at \$50.01. A limit buy simply specifies the highest price at which you will trade -- you will always get the best available price when transacting.
+</textarea>
+</section>
+
+
+<section data-background-image="./code_image.jpg">
+  <div class="stretch">
+    <iframe src="https://micfm.shinyapps.io/markowitz_app1/" height="100%" width="100%"></iframe>
+  </div>
+  <!-- <a href="https://micfm.shinyapps.io/markowitz_app1/" data-preview-link>Interact with Diversification</a> -->
+  <!-- <iframe width="100%" height="100%" src="https://www.w3schools.com"></iframe> -->
+</section>
+
+<section data-markdown>
+	<textarea data-template>
+<h3>Credits and Collaboration</h3>
+
+Click the following links to see the [code](https://github.com/FinancialMarkets/5MinuteFinance/blob/master/Equity/limit_order_book/limit_order_book.Rmd), [authors of this presentation](https://github.com/FinancialMarkets/5MinuteFinance/blame/master/Equity/limit_order_book/limit_order_book.Rmd), and [all the collaborators who have contributed to 5MinuteFinance](https://github.com/FinancialMarkets/5MinuteFinance/graphs/contributors).
+
+If you would like to make any additions or corrections to this presentation, visit our [GitHub repository page](https://github.com/FinancialMarkets/5MinuteFinance#how-to-contribute) to learn more about how to contribute.
+
+- The interactive content in this presentation has used the [orderbook R package](https://cran.r-project.org/web/packages/orderbook/index.html).  Thanks to the package authors for this great tool.
+</textarea>
+</section>
+
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+  // More info about config & dependencies:
+  // - https://github.com/hakimel/reveal.js#configuration
+  // - https://github.com/hakimel/reveal.js#dependencies
+  Reveal.initialize({
+
+  transition: 'convex',
+  
+  <!-- menu: { -->
+  <!-- 	// Specifies which side of the presentation the menu will  -->
+  <!-- 	// be shown. Use 'left' or 'right'. -->
+  <!-- 	side: 'left', -->
+
+  <!-- 	// Add slide numbers to the titles in the slide list. -->
+  <!-- 	// Use 'true' or format string (same as reveal.js slide numbers) -->
+  <!-- 	numbers: false, -->
+
+  <!-- 	// Specifies which slide elements will be used for generating -->
+  <!-- 	// the slide titles in the menu. The default selects the first -->
+  <!-- 	// heading element found in the slide, but you can specify any -->
+  <!-- 	// valid css selector and the text from the first matching -->
+  <!-- 	// element will be used. -->
+  <!-- 	// Note: that a section data-menu-title attribute or an element -->
+  <!-- 	// with a menu-title class will take precedence over this option -->
+  <!-- 	titleSelector: 'h1, h2, h3, h4, h5, h6', -->
+
+  <!-- 	// If slides do not have a matching title, attempt to use the -->
+  <!-- 	// start of the text content as the title instead -->
+  <!-- 	useTextContentForMissingTitles: false, -->
+
+  <!-- 	// Hide slides from the menu that do not have a title. -->
+  <!-- 	// Set to 'true' to only list slides with titles. -->
+  <!-- 	hideMissingTitles: false, -->
+
+  <!-- 	// Add markers to the slide titles to indicate the  -->
+  <!-- 	// progress through the presentation -->
+  <!-- 	markers: false, -->
+
+  <!-- 	// Specify custom panels to be included in the menu, by -->
+  <!-- 	// providing an array of objects with 'title', 'icon' -->
+  <!-- 	// properties, and either a 'src' or 'content' property. -->
+  <!-- 	custom: false, -->
+
+  <!-- 	// Specifies the themes that will be available in the themes -->
+  <!-- 	// menu panel. Set to 'false' to hide themes panel. -->
+  <!-- 	themes: [ -->
+  <!-- 		{ name: 'Black', theme: 'css/theme/black.css' }, -->
+  <!-- 		{ name: 'White', theme: 'css/theme/white.css' }, -->
+  <!-- 		{ name: 'League', theme: 'css/theme/league.css' }, -->
+  <!-- 		{ name: 'Sky', theme: 'css/theme/sky.css' }, -->
+  <!-- 		{ name: 'Beige', theme: 'css/theme/beige.css' }, -->
+  <!-- 		{ name: 'Simple', theme: 'css/theme/simple.css' }, -->
+  <!-- 		{ name: 'Serif', theme: 'css/theme/serif.css' }, -->
+  <!-- 		{ name: 'Blood', theme: 'css/theme/blood.css' }, -->
+  <!-- 		{ name: 'Night', theme: 'css/theme/night.css' }, -->
+  <!-- 		{ name: 'Moon', theme: 'css/theme/moon.css' }, -->
+  <!-- 		{ name: 'Solarized', theme: 'css/theme/solarized.css' } -->
+  <!-- 	], -->
+
+  <!-- 	// Specifies if the transitions menu panel will be shown. -->
+  <!-- 	transitions: true, -->
+
+  <!-- 	// Adds a menu button to the slides to open the menu panel. -->
+  <!-- 	// Set to 'false' to hide the button. -->
+  <!-- 	openButton: true, -->
+
+  <!-- 	// If 'true' allows the slide number in the presentation to -->
+  <!-- 	// open the menu panel. The reveal.js slideNumber option must  -->
+  <!-- 	// be displayed for this to take effect -->
+  <!-- 	openSlideNumber: false, -->
+
+  <!-- 	// If true allows the user to open and navigate the menu using -->
+  <!-- 	// the keyboard. Standard keyboard interaction with reveal -->
+  <!-- 	// will be disabled while the menu is open. -->
+  <!-- 	keyboard: true, -->
+
+  <!-- 	// Normally the menu will close on user actions such as -->
+  <!-- 	// selecting a menu item, or clicking the presentation area. -->
+  <!-- 	// If 'true', the sticky option will leave the menu open -->
+  <!-- 	// until it is explicitly closed, that is, using the close -->
+  <!-- 	// button or pressing the ESC or m key (when the keyboard  -->
+  <!-- 	// interaction option is enabled). -->
+  <!-- 	sticky: false, -->
+
+  <!-- 	// If 'true' standard menu items will be automatically opened -->
+  <!-- 	// when navigating using the keyboard. Note: this only takes  -->
+  <!-- 	// effect when both the 'keyboard' and 'sticky' options are enabled. -->
+  <!-- 	autoOpen: true, -->
+
+  <!-- 	// If 'true' the menu will not be created until it is explicitly -->
+  <!-- 	// requested by calling RevealMenu.init(). Note this will delay -->
+  <!-- 	// the creation of all menu panels, including custom panels, and -->
+  <!-- 	// the menu button. -->
+  <!-- 	delayInit: false, -->
+
+  <!-- 	// By default the menu will load it's own font-awesome library -->
+  <!-- 	// icons. If your presentation needs to load a different -->
+  <!-- 	// font-awesome library the 'loadIcons' option can be set to false -->
+  <!-- 	// and the menu will not attempt to load the font-awesome library. -->
+  <!-- 	loadIcons: true -->
+  <!-- }, -->
+  
+  audio: {
+  prefix: 'audio/', 	// audio files are stored in the "audio" folder
+  suffix: '.wav',		// audio files have the ".ogg" ending --- changed to wav
+  textToSpeechURL: null,  // the URL to the text to speech converter
+  defaultNotes: false, 	// use slide notes as default for the text to speech converter
+  defaultText: false, 	// use slide text as default for the text to speech converter
+  advance: 0, 		// advance to next slide after given time in milliseconds after audio has played, use negative value to not advance 
+  autoplay: false,	// automatically start slideshow
+  defaultDuration: 5,	// default duration in seconds if no audio is available 
+  playerOpacity: 0.05,	// opacity value of audio player if unfocused
+  playerStyle: 'position: fixed; bottom: 4px; left: 25%; width: 50%; height:75px; z-index: 33;', // style used for container of audio controls 
+  startAtFragment: false, // when moving to a slide, start at the current fragment or at the start of the slide
+  },
+  chalkboard: { 
+  src: null,
+  readOnly: undefined, 
+  toggleChalkboardButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
+  toggleNotesButton: { left: "150px", bottom: "30px", top: "auto", right: "auto" },
+  },
+    math: {
+		mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+		config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+	},
+  dependencies: [
+  { src: 'plugin/math/math.js', async: true },
+    { src: 'plugin/audio-slideshow/slideshow-recorder.js', condition: function( ) { return !!document.body.classList; } },				
+  { src: 'plugin/audio-slideshow/audio-slideshow.js', condition: function( ) { return !!document.body.classList; } },
+  { src: 'plugin/markdown/marked.js' },
+  { src: 'plugin/markdown/markdown.js' },
+  { src: 'plugin/menu/menu.js' },
+  { src: 'plugin/notes/notes.js', async: true },
+  <!-- { src: 'node_modules/reveal.js-menu/menu.js' }, -->
+  { src: 'plugin/chalkboard/chalkboard.js' },
+  { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+  ],
+  keyboard: {
+  67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+  66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+  46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+  8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+  68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+  82: function() { Recorder.toggleRecording(); },	// press 'r' to start/stop recording
+  90: function() { Recorder.downloadZip(); }, 	// press 'z' to download zip containing audio files
+  84: function() { Recorder.fetchTTS(); }, 	// press 't' to fetch TTS audio files
+  },
+  });
+</script>
+</body>
+</html>
