@@ -49,7 +49,7 @@
 	<section>
 	  <h3>The Limit Order Book</h3>
 
-	  <p align="left">The *limit order book* is the list of orders (prices at which you can transact) for a given security.</p>
+	  <p align="left">The <b class="fragment highlight-green">limit order book</b> is the list of orders (prices at which you can transact) for a given security.</p>
 	  <ul>
 	    <li>Depending on the security, these orders may be on one exchange, or aggregated across many exchanges.</li>
 	    <li>This presentation will give a basic description of the order book, and how your transactions will be handled by (and how they will affect) the book.</li>
@@ -60,7 +60,7 @@
 <section>
 <section>
 <h3>Order Book Description</h3>
-<p align="left">In the slide below, the plot on the right shows the full order book -- sell orders from \$11.38 to about \$12.50, and buy orders from \$11.36 down to about \$10.20.</p>
+<p align="left">In <b class="fragment highlight-red">the slide below</b>, the plot on the right shows the full order book -- sell orders from \$11.38 to about \$12.50, and buy orders from \$11.36 down to about \$10.20.</p>
 <ul>
   <li> We generally only show the book 5 or 10 levels deep, as in the graphic on the left, which shows the book 5 levels deep.</li>
 </ul>
@@ -100,7 +100,7 @@
 <section>
 <h3>The Bid-Ask Spread</h3>
 
-<p align="left">In this case the bid/ask spread is $11.36 - $11.38 = $0.02, or $$\frac{\$0.02}{\$11.38} = 0.1757\%$$.</p>
+<p align="left">In this case the bid/ask spread is \$11.36 - \$11.38 = \$0.02, or $$\ \frac{\$0.02}{\$11.38} = 0.1757\%$$</p>
 
 <ul>
   <li>The bid/ask percentage spread measures the <b class="fragment highlight-red">cost to transact</b> in that security---the larger the spread, the larger the transaction costs.</li>
@@ -135,11 +135,13 @@
 <section>
 <h3>Entering a Market Order</h3>
 
-<p align="left">If you want to buy or sell a stock, one type of order you can enter is a <b>market order</b>.  This will buy or sell the stock at the best available price in the market at the time the order arrives.  With a market order, you are guaranteed that you will buy or sell; however, you are not sure of the price at which you will trade.</p>
+<p align="left">If you want to buy or sell a stock, one type of order you can enter is a <b class="fragment highlight-green">market order</b>.  This will buy or sell the stock at the best available price in the market at the time the order arrives.  With a market order, you are guaranteed that you will buy or sell; however, you are not sure of the price at which you will trade.</p>
+</section>
 
+<section>
 <ul>
-  <li>A market buy will buy at the lowest ask price.  If it buys all available shares at the lowest ask, the next ask above will become the new lowest ask, and that is where additional shares will be bought.</li>
-  <li>A market sell will sell at the highest bid price.  Similarly, if it sells all available shares at the highest bid, the next bid below will become the new highest bid, and that is where additional shares will be sold.</li>
+  <li>A <b class="fragment highlight-green">market buy</b> will buy at the lowest ask price.  If it buys all available shares at the lowest ask, the next ask above will become the new lowest ask, and that is where additional shares will be bought.</li>
+  <li>A <b class="fragment highlight-red">market sell</b> will sell at the highest bid price.  Similarly, if it sells all available shares at the highest bid, the next bid below will become the new highest bid, and that is where additional shares will be sold.</li>
 </ul>
 </section>
 
@@ -159,7 +161,7 @@
 <section>
 <h3>Entering a Limit Order</h3>
 
-<p align="left">You can also buy or sell stock with a *limit order*.  In this type of order, you specify the highest/lowest price at which you will buy/sell.  With a limit order, you are guaranteed the price at which you will buy or sell (if the trade is executed); however, you are not guaranteed that you will actually trade.</p>
+<p align="left">You can also buy or sell stock with a <b class="fragment highlight-green">limit order</b>.  In this type of order, you specify the highest/lowest price at which you will buy/sell.  With a limit order, you are guaranteed the price at which you will buy or sell (if the trade is executed); however, you are not guaranteed that you will actually trade.</p>
 
 <ul>
   <li>Say you enter a limit order to buy shares at \$50.03. Your order will sit in the limit order book until a sell order executes against your trade at \$50.03.</li>
@@ -169,7 +171,10 @@
 
 
 <section>
-  <p align="left">What if I enter a limit order to buy at \$50.03 and the present ask is \$50.01?  Your broker will likely warn you, but if you enter the order it will immediately trigger, turn into a market order, and execute at \$50.01. A limit buy simply specifies the highest price at which you will trade--- you will always get the best available price when transacting.</p>
+  <p align="left">What if I enter a limit order to buy at \$50.03 and the present ask is \$50.01?  Your broker will likely warn you, but if you enter the order it will immediately trigger, turn into a market order, and execute at \$50.01. A limit buy simply specifies the highest price at which you will trade---you will always get the best available price when transacting.</p>
+
+    <p align="left">Use the app in the next slide to enter limit orders and see the effect on the limit order book.  On the left is the original book, and the right shows the book after the order is executed.</p>
+
 </section>
 
 
